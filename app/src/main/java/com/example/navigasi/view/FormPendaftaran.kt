@@ -34,11 +34,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.navigasi.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormPendaftaran(
+    NavController : NavHostController,
     onSubmitClick: () -> Unit
 ) {
     var textNama by remember { mutableStateOf("") }
