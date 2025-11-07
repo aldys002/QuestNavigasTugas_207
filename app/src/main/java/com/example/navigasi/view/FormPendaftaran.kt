@@ -122,6 +122,19 @@ fun FormPendaftaran(
                             }
                         }
                     }
+
+                    Text(
+                        text = stringResource(id = R.string.alamat).uppercase(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+
+                    OutlinedTextField(
+                        value = textAlamat,
+                        onValueChange = { textAlamat = it },
+                        label = { Text(stringResource(id = R.string.alamat)) },
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
 
