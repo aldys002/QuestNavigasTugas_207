@@ -33,7 +33,7 @@ fun Beranda (
         Text(text = stringResource(id = R.string.selamat_datang))
         Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
         Image(
-            painter = painterResource(id = ),
+            painter = painterResource(id = R.drawable.beranda),
             contentDescription = null,
             modifier = Modifier.size(size = 120.dp),
             contentScale = ContentScale.Fit
