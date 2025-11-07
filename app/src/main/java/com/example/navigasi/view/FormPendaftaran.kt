@@ -4,15 +4,18 @@ import androidx.annotation.OptIn
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -93,6 +96,32 @@ fun FormPendaftaran(
                         label = {Text(stringResource(id = R.string.nama_lengkap))},
                         modifier = Modifier.fillMaxWidth()
                     )
+
+                    Text(
+                        text = stringResource(id = R.string.jenis_kelamin).uppercase(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+
+                    Column {
+                        gender.forEach { item ->
+                            Row (
+                                modifier = Modifier
+                                    .selectable(
+                                        selected = textJK == item,
+                                        onClick = { textJK = item }
+                                    )
+                                    .padding(vertical = 2.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                RadioButton(
+                                    selected = textJK == item,
+                                    onClick = { textJK = item }
+                                )
+                                Text(text = item)
+                            }
+                        }
+                    }
                 }
             }
 
