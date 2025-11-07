@@ -144,7 +144,11 @@ fun FormPendaftaran(
                     Spacer(modifier = Modifier.height(10.dp))
 
                     Button (
-                        onClick = onSubmitClick,
+                        onClick = {
+                            navController.navigate("ListPeserta") {
+                                popUpTo("FormPendaftaran") { inclusive = true }
+                            }
+                        },
                         enabled = textNama.isNotEmpty() && textAlamat.isNotEmpty(),
                         modifier = Modifier
                             .fillMaxWidth()
