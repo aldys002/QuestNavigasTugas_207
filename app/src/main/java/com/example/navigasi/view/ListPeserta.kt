@@ -90,6 +90,13 @@ fun ListPeserta(
                 ) {
                     Text(text = stringResource(id = R.string.beranda))
                 }
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = onDaftarClick
+                ) {
+                    Text(text = stringResource(id = R.string.form_pendaftaran))
+                }
 
             }
         }
