@@ -44,6 +44,13 @@ fun DataApp(
                     }
                 )
             }
+            composable(route = Navigasi.FormPendaftaran.name) {
+                FormPendaftaran(
+                    onSubmitDaftarClick = {
+                        navController.navigate(Navigasi.ListPeserta.name)
+                    }
+                )
+            }
         }
     }
 }
