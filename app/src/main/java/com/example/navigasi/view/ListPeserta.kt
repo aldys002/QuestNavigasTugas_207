@@ -1,5 +1,6 @@
 package com.example.navigasi.view
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -40,5 +41,11 @@ fun ListPeserta(
                 )
             )
         }
-    ) {  }
+    ) { innerPadding ->
+        Column(modifier = Modifier
+            .padding(paddingValues = innerPadding)
+            .padding(all = dimensionResource(id = R.dimen.padding_medium)),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {  }
+    }
 }
