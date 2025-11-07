@@ -2,6 +2,7 @@ package com.example.navigasi.view
 
 import androidx.annotation.OptIn
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -69,6 +70,15 @@ fun FormPendaftaran(
                     .fillMaxWidth()
                     .padding(all = dimensionResource(id = R.dimen.padding_small))
             ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(all = dimensionResource(id = R.dimen.padding_medium)),
+                    verticalArrangement = Arrangement.spacedBy(
+                        dimensionResource(id = R.dimen.padding_small)
+                    )
+                ) {  }
+            }
 
             }
         }
