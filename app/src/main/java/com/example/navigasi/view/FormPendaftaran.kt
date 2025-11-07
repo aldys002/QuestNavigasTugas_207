@@ -39,10 +39,10 @@ import com.example.navigasi.R
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class)
 @Composable
 fun FormPendaftaran(
-    NavController : NavHostController,
+    navController : NavHostController,
     onSubmitClick: () -> Unit
 ) {
     var textNama by remember { mutableStateOf("") }
