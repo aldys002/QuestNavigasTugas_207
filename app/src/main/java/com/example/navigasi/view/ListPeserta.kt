@@ -14,6 +14,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import com.example.navigasi.R
 
 
@@ -46,6 +49,28 @@ fun ListPeserta(
             .padding(paddingValues = innerPadding)
             .padding(all = dimensionResource(id = R.dimen.padding_medium)),
             verticalArrangement = Arrangement.SpaceBetween
-        ) {  }
+        ) {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(
+                    space = dimensionResource(id = R.dimen.padding_small)
+                )
+            ) {
+                items.forEach { item ->
+                    Column {
+                        Text(
+                            text = item.first.uppercase(),
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                        Text(
+                            text = item.second,
+                            fontWeight = FontWeight.Bold,
+                            fontFamily = FontFamily.Cursive,
+                            fontSize = 22.sp
+                        )
+                    }
+                }
+            }
+        }
     }
 }
