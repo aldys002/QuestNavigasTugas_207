@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Navigasi</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="alamat">Alamat</string>
+    <string name="submit">Submit</string>
+    <string name="beranda">Beranda</string>
+    <string name="form_pendaftaran">Formulir Pendaftaran</string>
+    <string name="list_peserta">List Daftar Peserta</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="nama_pengguna">Aldys Igidia Triatmaja</string>
+    <string name="nim_pengguna">20230140207</string>
 </resources>
