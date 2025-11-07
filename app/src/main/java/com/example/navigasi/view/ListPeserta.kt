@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
@@ -49,7 +50,7 @@ fun ListPeserta(
                     )
                 },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
-                    containerColor = Color(color = 0xFF00897B)
+                    containerColor = Color(color = 0xFFD8BFD8)
                 )
             )
         }
@@ -80,11 +81,12 @@ fun ListPeserta(
                     }
                     HorizontalDivider(
                         thickness = dimensionResource(id = R.dimen.thickness_divider),
-                        color = Color(color = 0xFFB39DDB)
+                        color = Color(color = 0xFFD8BFD8)
                     )
                 }
                 Spacer(modifier = Modifier.height(height = 10.dp))
                 Button(
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8E24AA)),
                     modifier = Modifier.fillMaxWidth(),
                     onClick = onBerandaClick
                 ) {
@@ -92,6 +94,7 @@ fun ListPeserta(
                 }
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
                 Button(
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8E24AA)),
                     modifier = Modifier.fillMaxWidth(),
                     onClick = onDaftarClick
                 ) {
