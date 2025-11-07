@@ -45,7 +45,7 @@ fun ListPeserta(
             TopAppBar(
                 title = {
                     Text(text = stringResource(id = R.string.list_peserta),
-                        color = Color.White)
+                        color = Color.White
                     )
                 },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
@@ -79,8 +79,8 @@ fun ListPeserta(
                         )
                     }
                     HorizontalDivider(
-                        thickness = dimensionResource(id = R.dimen.thickness_divider)
-                        color = Color.Cyan
+                        thickness = dimensionResource(id = R.dimen.thickness_divider),
+                        color = Color(color = 0xFFB39DDB)
                     )
                 }
                 Spacer(modifier = Modifier.height(height = 10.dp))
