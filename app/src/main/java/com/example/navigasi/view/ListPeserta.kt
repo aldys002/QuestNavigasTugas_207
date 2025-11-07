@@ -31,8 +31,8 @@ import com.example.navigasi.R
 
 @Composable
 fun ListPeserta(
-    onBerandaClick : () ->,
-    onDaftarClick : () ->
+    onBerandaClick : () -> Unit,
+    onDaftarClick : () -> Unit
 ) {
     val items = listOf(
         Pair(first = stringResource(id = R.string.nama_lengkap), second = "Aldys Igidia Triatmaja"),
@@ -44,7 +44,7 @@ fun ListPeserta(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = stringResource(id = listOf(R.string.list_peserta),
+                    Text(text = stringResource(id = R.string.list_peserta),
                         color = Color.White)
                     )
                 },
