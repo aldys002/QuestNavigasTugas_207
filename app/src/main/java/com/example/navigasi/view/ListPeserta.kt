@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import com.example.navigasi.R
 
 
@@ -15,10 +16,9 @@ fun ListPeserta(
     onBerandaClick : () ->,
     onDaftarClick : () ->
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(dimensionResource(id = R.dimen.padding_medium)),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {  }
+    val items = listOf(
+        Pair(first = stringResource(id = R.string.nama_lengkap), second = "Aldys Igidia Triatmaja"),
+        Pair(first = stringResource(id = R.string.jenis_kelamin), second = "Perempuan"),
+        Pair(first = stringResource(id = R.string.alamat), second = "Sleman, Yogyakarta")
+    )
 }
